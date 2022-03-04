@@ -10,3 +10,4 @@
         name: "{{ storage_account_name }}"
         location: "{{ region }}"
         type: Standard_LRS
+        allow_blob_public_access: false
