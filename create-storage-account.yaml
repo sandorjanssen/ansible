@@ -1,0 +1,12 @@
+---
+- name: Create Storage Account
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Create Storage Account
+      azure.azcollection.azure_rm_storageaccount:
+        resource_group: "{{ resource_group_name }}"
+        name: "{{ name }}"
+        location: "{{ region }}"
+        type: Standard_LRS
